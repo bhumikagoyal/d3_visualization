@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+ <script src="_versions1.js"></script>
+   <script src="http://d3js.org/d3.v3.min.js"></script>
+<style>
+.chart rect.sad-rect {
+   fill: #9467bd;
+}
+.chart rect.happy-rect {
+   fill: #f2f233;
+}
+.chart {
+   padding: 5px;
+}
+.chart text {
+   fill: black;
+   font: 10px sans-serif;
+}
+</style>
+<body>
+  <p>
+    Happy/Sad breakdown by locale for Firefox OS
+  </p>
+  <p class="extents"></p>
+  <div class="chart-container"></div>
+  <script>call("https://input.mozilla.org/api/v1/feedback/?products=Firefox OS&date_delta=7d");</script>
+
+ 
+</body>

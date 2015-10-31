@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>d3</title>
+ <meta charset="utf-8">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+<h2> Percentage of happy and sad people</h2>
+    <script>
+	var data1={
+"name":"",
+"value":100,
+"children":[
+{"name":"happy","value":23},
+{"name":"sad","value":16}
+
+]
+};
+	var canvas=d3.select("body")
+	            .append("svg")
+				.attr("height",1000)
+				.attr("width",1000);
+				var pack = d3.layout.pack()
+					.size([400,400])
+					.padding(5);
+					var nodes=pack.nodes(data1);
+		  
+			         var node=canvas.selectAll(".node")
+			         .data(nodes)
+					 .enter()
+					 .append("g")
+					   .attr("class","node")
+					   .attr("transform",function(d){return "translate(" +d.x+ "," +d.y +")";});
+			 node.append("circle")
+			
+			          .attr("r",function(d){  return d.r;})
+					  .attr("fill",function(d){return "#7b4173";})
+					  .attr("opacity",0.35)
+					  .attr("stroke","#ADADAD")
+					  .attr("stroke-width","2");
+					  node.append("text")
+                     .attr("text-color","red")
+					 .attr("text-anchor","middle")
+					 .text(function(d){return d.name;})
+					  
+					  </script>
+					  </body>
+					  </html>

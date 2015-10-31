@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<style>
+.chart rect.sad-rect {
+   fill: #7777ff;
+}
+.chart rect.happy-rect {
+   fill: #f2f233;
+}
+.chart {
+   padding: 5px;
+}
+.chart text {
+   fill: black;
+   font: 10px sans-serif;
+}
+</style>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="locale.js"></script>
+<body>
+  <p>
+    <h3>Happy/Sad breakdown by locale for Firefox For Android</h3>
+  </p>
+  <p class="extents"></p>
+  <div class="chart-container"></div>
+  <script>
+call("https://input.mozilla.org/api/v1/feedback/?&product=Firefox%20for%20Android&date_delta=7d");
+</script>
+
+		
+	</body>
+
+</html>
