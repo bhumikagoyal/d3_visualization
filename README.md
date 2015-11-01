@@ -4,3 +4,4 @@ I have used the feedback api to pull data from mozilla feedback site and made so
 The visualizations are made using the d3 javascript library and can be viewed separately for each product,platform,versions etc.
 The api link -  https://input.mozilla.org/api/v1/feedback
 Mozilla feedback website link - https://input.mozilla.org/en-US/?product=Firefox
+Link to my project - https://d157rqmxrxj6ey.cloudfront.net/bhumika/10584/
